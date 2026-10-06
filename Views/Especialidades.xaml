@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_Citas_Medicas.Views.Especialidades"
+             Title="Especialidades">
+
+    <!-- Estilo de la cabecera de especialidades y vinculación con la lista de datos-->
+    <VerticalStackLayout Padding="10">
+        <CollectionView x:Name="collectionViewEspecialidades"
+                        ItemsSource="{Binding especialidades}"
+                        IsGrouped="True">
+
+            <CollectionView.GroupHeaderTemplate>
+                <DataTemplate>
+                    <Border Stroke="Black"
+                            StrokeThickness="2"
+                            StrokeShape="RoundRectangle 40" 
+                            Margin="0">
+                        <Label Text="Especialidades" 
+                           FontSize="30" 
+                           FontAttributes="Bold" 
+                           TextColor="black"
+                           BackgroundColor="#adecff"
+                           Padding="10"
+                           HorizontalTextAlignment="Center"/>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.GroupHeaderTemplate>
+            
+            <!--Estilo de la lista de especialidades-->
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border  BackgroundColor="{Binding ColorFondo}"
+                             Stroke="Black"                           
+                             StrokeThickness="1"                                        
+                             StrokeShape="RoundRectangle 10"                                            
+                             Margin="0,5"                                            
+                             Padding="3">
+                        <HorizontalStackLayout Spacing="20">
+                            <Border Stroke="Black"
+                                    StrokeThickness="1"
+                                    StrokeShape="RoundRectangle 10">
+                                <Image Source="{Binding Imagen}"                                                          
+                                   WidthRequest="50"                
+                                   HeightRequest="50" />
+                            </Border>
+                            <Label Text="{Binding Nombre}"                       
+                                   VerticalOptions="Center"                        
+                                   FontSize="25"                       
+                                   TextColor="Black"                       
+                                   FontAttributes="Bold" />
+                        </HorizontalStackLayout>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+    
+</ContentPage>

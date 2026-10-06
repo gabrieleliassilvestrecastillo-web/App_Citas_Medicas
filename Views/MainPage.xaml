@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_Citas_Medicas.Views.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="login.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="imagen de registro" />
+
+            <Label
+                Text="¡Bienvenido!"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Label
+                Text="Ingrese sus credenciales para continuar"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"  />
+
+            <Entry Placeholder="Nombre de usuario"/>
+            
+            <Entry Placeholder="Contraseña"/>
+            
+            <Button
+           x:Name="LoginBtn"
+           Text="Iniciar sesión" 
+           FontAttributes="Bold"
+           FontSize="18"
+           TextColor="Black"
+           BackgroundColor="Turquoise"
+           HorizontalOptions="Fill" 
+           Clicked="loginBtn"/>
+
+            <StackLayout 
+                Orientation="Horizontal"
+                HorizontalOptions="Center"
+                Margin="0,10,0,0">
+                <Label 
+                    Text="¿No está registrado?"/>
+                <Label 
+                    Text=" Regístrese aquí" 
+                    TextColor="Blue"/>
+            </StackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+    
+
+</ContentPage>
