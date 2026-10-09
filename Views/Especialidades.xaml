@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App_Citas_Medicas.Views.Especialidades"
-             Title="Especialidades">
+             Title="Especialidades"
+             Shell.BackgroundColor="#cadaeb">
 
     <!-- Estilo de la cabecera de especialidades y vinculación con la lista de datos-->
     <VerticalStackLayout Padding="10">
@@ -36,6 +37,9 @@
                              StrokeShape="RoundRectangle 10"                                            
                              Margin="0,5"                                            
                              Padding="3">
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="VerDoctores" />
+                        </Border.GestureRecognizers>
                         <HorizontalStackLayout Spacing="20">
                             <Border Stroke="Black"
                                     StrokeThickness="1"

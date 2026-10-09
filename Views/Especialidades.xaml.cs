@@ -69,5 +69,8 @@ public partial class Especialidades : ContentPage
         }));
         BindingContext = this;
     }
-    
+    private async void VerDoctores(object sender, TappedEventArgs e)
+    {
+        await Navigation.PushAsync(new Doctores());
+    }
 }

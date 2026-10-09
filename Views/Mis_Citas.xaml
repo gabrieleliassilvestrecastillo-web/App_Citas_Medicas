@@ -5,7 +5,9 @@
              Title="Mis_Citas">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="NO HAY"
+            FontSize="210"
+            HorizontalTextAlignment="Center"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
     </VerticalStackLayout>

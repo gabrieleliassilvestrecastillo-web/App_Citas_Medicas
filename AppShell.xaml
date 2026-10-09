@@ -4,11 +4,37 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:App_Citas_Medicas.Views"
-    Title="App_Citas_Medicas">
+    Title="App_Citas_Medicas"    
+    Shell.FlyoutBehavior="Flyout">
 
     <ShellContent
         Title="Registro"
+        Icon="login.png"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
+
+    <ShellContent
+        Title="Menu"
+        Icon="menu.jpg"
+        ContentTemplate="{DataTemplate local:Menu}"
+        Route="MenuPage" />
+    
+    <ShellContent
+        Title="Especialidades"
+        Icon="especialidad.jpg"
+        ContentTemplate="{DataTemplate local:Especialidades}"
+        Route="EspecialidadesPage" />
+    
+    <ShellContent
+        Title="Realizar Citas"
+        Icon="citas.jpg"
+        ContentTemplate="{DataTemplate local:Realizar_Citas}"
+        Route="Realizar_CitasPage" />
+
+    <ShellContent
+        Title="Doctores"
+        Icon="doct.jpg"
+        ContentTemplate="{DataTemplate local:Doctores}"
+        Route="DoctoresPage" />
 
 </Shell>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_Citas_Medicas.Views.Registro"
+             Title="Registro">
+    <VerticalStackLayout Margin="10,10,10,10">
+        <Grid ColumnDefinitions="*,*"
+              RowDefinitions="*,*"
+              ColumnSpacing="10"
+              Margin="5,5,5,30">
+            <Label           
+                Text="Nombre"                                             
+                Grid.Row="0"                
+                Grid.Column="0"/>
+            <Entry
+            Placeholder="Nombre"
+            Grid.Row="1"                                              
+            Grid.Column="0"
+            WidthRequest="150"
+            HorizontalOptions="Start"/>
+            <Label 
+            Text="Apellido"
+                Grid.Row="0"
+                Grid.Column="1"/>
+            <Entry
+            Placeholder="Apellido"
+            Grid.Row="1"
+            Grid.Column="1"                       
+            WidthRequest="150"
+            HorizontalOptions="Start"/>
+        </Grid>
+        <Label 
+          Text="  Cédula"/>
+        <Entry
+          Placeholder="Cédula"
+          WidthRequest="240"
+          HorizontalOptions="Start"/>
+        <Label 
+            Text="  Correo Electronico" />
+        <Entry
+            Placeholder="Correo Electronico"
+            WidthRequest="240"
+            HorizontalOptions="Start"/>
+        <Label 
+            Text="  Contraseña" />
+        <Entry
+            Placeholder="Contraseña"                        
+            WidthRequest="240"
+            HorizontalOptions="Start"/>
+        <Label 
+            Text="  Confirmar contraseña"/>
+        <Entry
+            Placeholder="Confirmar contraseña"                      
+            WidthRequest="240"
+            HorizontalOptions="Start"/>
+        <Button
+            Text="Registrarse"
+            Margin="30,20,30,0"/>
+
+    </VerticalStackLayout>
+</ContentPage>

@@ -2,55 +2,57 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App_Citas_Medicas.Views.Menu"
-             Title="Menu">
+             Title="Menu"
+             Shell.BackgroundColor="#cadaeb">
     
     <VerticalStackLayout>
         <Border Stroke="Black"
                 StrokeThickness="2"
                 StrokeShape="RoundRectangle 40"
-                Margin="0,0,0,70">
-            <Label 
-            Text="Seleccione el servicio deseado"
-            FontSize="25"
-            FontAttributes="Bold"
-            VerticalOptions="Center"
-            HorizontalOptions="Fill" 
-            HorizontalTextAlignment="Center"
-            Background="#56d6fc" />
+                Margin="10,10,10,70">
+            <Label             
+                Text="Seleccione el servicio deseado"            
+                FontSize="25"            
+                FontAttributes="Bold"            
+                VerticalOptions="Center"            
+                HorizontalOptions="Fill"             
+                HorizontalTextAlignment="Center"            
+                Background="#56d6fc" 
+                Padding="15"/>
         </Border>
 
         <!-- Configuracion de la interfaz de Doctores -->
-        <Border BackgroundColor="#d4fff3" 
-        Stroke="Black"
-        StrokeThickness="3"
-        StrokeShape="RoundRectangle 16"
-        Padding="10"
-        HorizontalOptions="Fill"
-        VerticalOptions="Center"
-        Margin="0,0,0,70">
+        <Border BackgroundColor="#d4fff3"         
+                Stroke="Black"        
+                StrokeThickness="3"        
+                StrokeShape="RoundRectangle 16"        
+                Padding="10"        
+                HorizontalOptions="Fill"        
+                VerticalOptions="Center"        
+                Margin="5,0,5,70">
             <Border.GestureRecognizers>
                 <TapGestureRecognizer Tapped="VerEspecialidades" />
             </Border.GestureRecognizers>
             <Grid ColumnDefinitions="80,*" ColumnSpacing="15" VerticalOptions="Center">
-                <Border BackgroundColor="Transparent" 
-                StrokeShape="RoundRectangle 100"
-                Stroke="Black"
-                StrokeThickness="1"
-                VerticalOptions="Center"
-                HeightRequest="80"
-                WidthRequest="80">
-                    <Image Source="doctores.png"
-                   Aspect="AspectFill"
-                   HeightRequest="80"
-                   WidthRequest="80"
-                   Margin="0"
-                   SemanticProperties.Description="imagen de doctores" />
+                <Border BackgroundColor="Transparent"                 
+                        StrokeShape="RoundRectangle 100"                
+                        Stroke="Black"                
+                        StrokeThickness="1"                
+                        VerticalOptions="Center"                
+                        HeightRequest="80"                
+                        WidthRequest="80">
+                    <Image Source="doctores.png"                   
+                           Aspect="AspectFill"                   
+                           HeightRequest="80"                   
+                           WidthRequest="80"                   
+                           Margin="0"                   
+                           SemanticProperties.Description="imagen de doctores" />
                 </Border >
-                <Label Grid.Column="1"
-               Text="Ver Especialidades"
-               FontSize="32"
-               FontAttributes="Bold"
-               VerticalOptions="Center" />
+                <Label Grid.Column="1"               
+                       Text="Ver Especialidades"             
+                       FontSize="32"               
+                       FontAttributes="Bold"               
+                       VerticalOptions="Center" />
             </Grid>
         </Border>
         
@@ -62,30 +64,30 @@
                 Padding="10"
                 HorizontalOptions="Fill"
                 VerticalOptions="Center"
-                Margin="0,0,0,70">
+                Margin="5,0,5,70">
             <Border.GestureRecognizers>
                 <TapGestureRecognizer Tapped="VerMisCitas" />
             </Border.GestureRecognizers>
             <Grid ColumnDefinitions="80,*" ColumnSpacing="15" VerticalOptions="Center">
-                <Border BackgroundColor="Transparent" 
-         StrokeShape="RoundRectangle 100"
-         Stroke="Black"
-         StrokeThickness="1"
-         VerticalOptions="Center"
-         HeightRequest="80"
-         WidthRequest="80">
-                    <Image Source="citas.jpg"
-            Aspect="AspectFill"
-            HeightRequest="80"
-            WidthRequest="80"
-            Margin="0"
-            SemanticProperties.Description="imagen de citas" />
+                <Border BackgroundColor="Transparent"          
+                        StrokeShape="RoundRectangle 100"
+                        Stroke="Black"         
+                        StrokeThickness="1"         
+                        VerticalOptions="Center"         
+                        HeightRequest="80"      
+                        WidthRequest="80">
+                    <Image Source="citas.jpg"            
+                           Aspect="AspectFill"            
+                           HeightRequest="80"            
+                           WidthRequest="80"            
+                           Margin="0"         
+                           SemanticProperties.Description="imagen de citas" />
                 </Border >
-                <Label Grid.Column="1"
-        Text="Mis citas"
-        FontSize="32"
-        FontAttributes="Bold"
-        VerticalOptions="Center" />
+                <Label Grid.Column="1"        
+                       Text="Mis citas"        
+                       FontSize="32"        
+                       FontAttributes="Bold"        
+                       VerticalOptions="Center" />
             </Grid>
         </Border>
 

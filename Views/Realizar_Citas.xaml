@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_Citas_Medicas.Views.Realizar_Citas"
+             Title="Realizar Cita"
+             Shell.BackgroundColor="#cadaeb">
+    
+    <CollectionView x:Name="collectionViewEspecialidades"
+                       ItemsSource="{Binding citas}"
+                       IsGrouped="True">
+        <CollectionView.ItemTemplate>
+        <DataTemplate>
+            <Border Stroke="Black"
+                    StrokeThickness="1"
+                    StrokeShape="RoundRectangle 20"
+                    Margin="7,5,7,20"
+                    BackgroundColor="#e8ebed">
+                <Grid ColumnDefinitions="*, *, *"
+                      RowDefinitions="*, *, *"
+                      ColumnSpacing="5"
+                      RowSpacing="10"
+                      Padding="5">
+                    
+                        <Label Text="Dia"                                       
+                               FontSize="20"
+                               TextColor="Black"
+                               FontAttributes="Bold"                                  
+                               HorizontalTextAlignment="Center"
+                               Grid.Row="0"
+                               Grid.Column="0"/>
+                        <Label Text="Hora"                                                                            
+                               FontSize="20"                                     
+                               TextColor="Black"                                     
+                               FontAttributes="Bold" 
+                               HorizontalTextAlignment="Center"
+                               Grid.Row="0"
+                               Grid.Column="1"/>
+                        <Label Text="Estado"                                                                            
+                               FontSize="20"                                     
+                               TextColor="Black"                                     
+                               FontAttributes="Bold" 
+                               HorizontalTextAlignment="Center"
+                               Grid.Row="0"
+                               Grid.Column="3"/>
+                        <Label Text="{Binding Dia}"                                                                        
+                               FontSize="15"                                     
+                               TextColor="Black"                                     
+                               HorizontalTextAlignment="Center"
+                               Grid.Row="1"
+                               Grid.Column="0"/>
+                        <Label Text="{Binding Hora}"                                                     
+                               FontSize="15"                           
+                               TextColor="Black"                           
+                               HorizontalTextAlignment="Center"
+                               Grid.Row="1"
+                               Grid.Column="1"/>
+                        <Label Text="{Binding Estado}"                                                                        
+                               FontSize="15"                                     
+                               TextColor="Black"                                     
+                               HorizontalTextAlignment="Center"
+                               Grid.Row="1"
+                               Grid.Column="2"/>
+                        <Button Text="Agendar"                                                    
+                                FontSize="20"
+                                TextColor="Black"
+                                FontAttributes="Bold"
+                                WidthRequest="200"
+                                HeightRequest="50"
+                                Background="#d4d2c5"
+                                Grid.Row="2"                               
+                                Grid.Column="1"/>
+
+                </Grid>
+            </Border>
+        </DataTemplate>
+    </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>
